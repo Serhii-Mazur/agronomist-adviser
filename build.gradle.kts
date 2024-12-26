@@ -20,13 +20,15 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-mail")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.3")
+	implementation("org.springframework.boot:spring-boot-starter-validation:3.3.4")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.flywaydb:flyway-database-postgresql")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.security:spring-security-test")
+	testImplementation("org.mockito:mockito-junit-jupiter:5.13.0")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
